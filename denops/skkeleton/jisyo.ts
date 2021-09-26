@@ -99,16 +99,16 @@ export class Library {
     const table: Record<string, string[]> = {};
     for (const [key, value] of Object.entries(this.#globalJisyo.okurinasi)) {
       if (key.startsWith(prefix)) {
-        table[key] = Array.from(new Set(value.concat(table[key])));
+        table[key] = Array.from(new Set(value.concat(table[key] ?? [])));
       }
     }
     for (const [key, value] of Object.entries(this.#userJisyo.okurinasi)) {
       if (key.startsWith(prefix)) {
-        table[key] = Array.from(new Set(value.concat(table[key])));
+        table[key] = Array.from(new Set(value.concat(table[key] ?? [])));
       }
     }
     for (const [key, value] of await this.#remoteJisyo.getCandidates(prefix)) {
-      table[key] = Array.from(new Set(value.concat(table[key])));
+      table[key] = Array.from(new Set(value.concat(table[key] ?? [])));
     }
     return Promise.resolve(
       Object.entries(table).sort((a, b) => a[0].localeCompare(b[0])),
