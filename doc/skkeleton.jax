@@ -202,7 +202,7 @@ remoteJisyo                              *skkeleton-config-remoteJisyo*
         (デフォルト v:false)
         辞書サーバー機能を有効にします。
 remoteJisyoHostname                   *skkeleton-config-remoteJisyoHostname*
-        (デフォルト "localhost")
+        (デフォルト "127.0.0.1")
         辞書サーバーのホスト名を指定します。
 remoteJisyoPort                   *skkeleton-config-remoteJisyoPort*
         (デフォルト 1178)

@@ -19,7 +19,7 @@ export const config = {
   markerHenkan: "▽",
   markerHenkanSelect: "▼",
   remoteJisyo: false,
-  remoteJisyoHostname: "localhost",
+  remoteJisyoHostname: "127.0.0.1",
   remoteJisyoPort: 1178,
 };
 
